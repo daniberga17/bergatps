@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        function invio(){
+            let dati={nome: document.getElementById('nome').value,
+                cognome: document.getElementById('cognome').value,
+                eta: document.getElementById('eta').value
+            }
+            const s=JSON.stringify(dati);
+            localStorage.setItem('s', s);
+            document.location.href="receiver.html"
+        }
+    </script>
+<body>
+    <div>Inserisci nome</div>
+    <input type="text" name="n" id="nome"><br>
+    <div>Inserisci cognome</div>
+    <input type="text" name="c" id="cognome"><br>
+    <div>Inserisci età</div>
+    <input type="number" name="e" id="eta"><br>
+    <button input type="button" onclick="invio()">INVIA</button>
+</body>
+</html>

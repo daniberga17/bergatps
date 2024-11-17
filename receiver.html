@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let s=localStorage.getItem('s');
+        let dati=JSON.parse(s);
+        let divn=document.getElementById("nome");
+        let divc=document.getElementById("cognome");
+        let dive=document.getElementById("eta");
+        divn.innerText+=dati.nome;
+        divc.innerText+=dati.cognome;
+        dive.innerText+=dati.eta;
+    </script>
+</head>
+<body>
+    <p>Nome: </p><p id="nome"></p><br>
+    <p>Cognome: </p><p id="cognome"></p><br>
+    <p>Età: </p><p id="eta"></p><br>
+</body>
+</html>
