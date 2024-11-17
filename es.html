@@ -7,30 +7,37 @@
 </head>
 <body>
     <table id="tabella">
-        <tr>
-            <td>Nome</td>
-            <td>Cognome</td>
-            <td>Età</td>
-            <td>Indirizzo</td>
-            <td>Città</td>
-            <td>Telefono</td>
-        </tr>
+        <thead>
+            <tr>
+                <td>Nome</td>
+                <td>Cognome</td>
+                <td>Età</td>
+                <td>Indirizzo</td>
+                <td>Città</td>
+                <td>Telefono</td>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
     </table>
     <script>
-        var xml=new XMLHttpRequest();
-        var tab=document.getElementById("tabella");
-        xml.open("GET", "tabella.json", true);
+        var xml=new XMLHttpRequest()
+        xml.open("GET", "tabella.json", true)
         xml.onload=function(){
-            if(xml.status==200){
-                var dati=JSON.parse(xml.responseText);
-                for(i=0; i<dati.length; i++){
-                    var r=tab.insertRow();
-                    r.insertCell(0).textContent=data[i].Nome;
-                    r.insertCell(1).textContent=data[i].Cognome;
-                    r.insertCell(2).textContent=data[i].Eta;
-                    r.insertCell(3).textContent=data[i].Indirizzo;
-                    r.insertCell(4).textContent=data[i].Citta;
-                    r.insertCell(5).textContent=data[i].Telefono;
+            if(xml.readyState==4 && xml.status==200){
+                var j=JSON.parse(xml.responseText)
+                var t=document.getElementById("tabella").getElementsByTagName("tbody")[0]
+                for(i=0; i<j.length; i++){
+                    var k=j[i];
+                    var r="<tr>" + 
+                        "<td>"+k.nome+"</td>"+
+                         "<td>"+k.cognome+"</td>"+
+                         "<td>"+k.eta"</td>"+
+                         "<td>"+k.indirizzo+"</td>"+
+                         "<td>"+k.citta+"</td>"+
+                         "<td>"+k.telefono+"</td>"+
+                        "</tr>";
+                        t.innerHTML+=r
                 }
             }
         }
