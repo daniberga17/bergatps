@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+</head>
+<body>
+    <p>Nome: </p><p id="nome"></p>
+    <p>Cognome: </p><p id="cognome"></p>
+    <p>Età: </p><p id="eta"></p>
+
     <script>
         let s=localStorage.getItem('s');
         let dati=JSON.parse(s);
@@ -14,10 +20,5 @@
         divc.innerText+=dati.cognome;
         dive.innerText+=dati.eta;
     </script>
-</head>
-<body>
-    <p>Nome: </p><p id="nome"></p><br>
-    <p>Cognome: </p><p id="cognome"></p><br>
-    <p>Età: </p><p id="eta"></p><br>
 </body>
 </html>
