@@ -3,7 +3,7 @@
         <dipendente>
             <nome>Gino</nome>
             <cognome>Rossi</cognome>
-            <portfolio>link1.html</portfolio>
+            <portfolio xlink:type="simple" xlink:href="link1.html"></portfolio>
         </dipendente>
     </azienda>
     <azienda>
