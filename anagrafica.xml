@@ -3,24 +3,28 @@
         <dipendente>
             <nome>Gino</nome>
             <cognome>Rossi</cognome>
+            <portfolio>link1.html</portfolio>
         </dipendente>
     </azienda>
     <azienda>
         <dipendente>
             <nome>Pino</nome>
             <cognome>Bianchi</cognome>
+            <portfolio>link2.html</portfolio>
         </dipendente>
     </azienda>
     <azienda>
         <dipendente>
             <nome>Ugo</nome>
             <cognome>Palmisano</cognome>
+            <portfolio>link3.html</portfolio>
         </dipendente>
     </azienda>
     <azienda>
         <dipendente>
             <nome>Mago</nome>
             <cognome>Crizio</cognome>
+            <portfolio>link4.html</portfolio>
         </dipendente>
     </azienda>
 </anagrafica>
