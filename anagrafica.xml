@@ -1,0 +1,26 @@
+<anagrafica>
+    <azienda>
+        <dipendente>
+            <nome>Gino</nome>
+            <cognome>Rossi</cognome>
+        </dipendente>
+    </azienda>
+    <azienda>
+        <dipendente>
+            <nome>Pino</nome>
+            <cognome>Bianchi</cognome>
+        </dipendente>
+    </azienda>
+    <azienda>
+        <dipendente>
+            <nome>Ugo</nome>
+            <cognome>Palmisano</cognome>
+        </dipendente>
+    </azienda>
+    <azienda>
+        <dipendente>
+            <nome>Mago</nome>
+            <cognome>Crizio</cognome>
+        </dipendente>
+    </azienda>
+</anagrafica>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function leggi(){
+        var xhttp=new XMLHttpRequest();
+        xhttp.onreadystatechange=function(){
+            if(this.readyState == 4 && this.status == 200){
+                myFunction(this);
+            }
+        };
+        xhttp.open("GET", "anagrafica.xml", true);
+        xhttp.send();
+    }
+    function myFunction(xml){
+        var i;
+        var xmlDoc=xml.responseXML;
+        var table="<tr><th>Cognome</th><th>Nome</th></tr>";
+        var x=xmlDoc.getElementsByTagName("dipendente");
+        for(i=0; i<x.length; i++){
+            table += "<tr><td>" +
+            x[i].getElementsByTagName("cognome")[0].childNodes[0].nodeValue + 
+            "</td><td>" + 
+            x[i].getElementsByTagName("nome")[0].childNodes[0].nodeValue +
+            "</td><tr>";
+        }
+        document.getElementById("tab").innerHTML=table;
+    }
+</script>
+<body onload="leggi()">
+    <table border="1" id="tab"></table>
+</body>
+</html>
