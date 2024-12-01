@@ -19,7 +19,7 @@
     function myFunction(xml){
         var i;
         var xmlDoc=xml.responseXML;
-        var table="<tr><th>Cognome</th><th>Nome</th></tr>";
+        var table="<tr><th>Cognome</th><th>Nome</th><th>Portfolio</th></tr>";
         var x=xmlDoc.getElementsByTagName("dipendente");
         for(i=0; i<x.length; i++){
             table += "<tr><td>" +
