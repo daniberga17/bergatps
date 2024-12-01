@@ -4,27 +4,27 @@
         <dipendente>
             <nome>Gino</nome>
             <cognome>Rossi</cognome>
-            <portfolio onclick="window.location.href='link1.html'">Portfolio</portfolio>
+            <portfolio>Portfolio</portfolio>
         </dipendente>
     </azienda>
     <azienda>
         <dipendente>
             <nome>Pino</nome>
             <cognome>Bianchi</cognome>
-             
+            <portfolio>Portfolio</portfolio>
         </dipendente>
     </azienda>
     <azienda>
         <dipendente>
             <nome>Ugo</nome>
             <cognome>Palmisano</cognome>
-            
+            <portfolio>Portfolio</portfolio>
     </azienda>
     <azienda>
         <dipendente>
             <nome>Mago</nome>
             <cognome>Crizio</cognome>
-            
+            <portfolio>Portfolio</portfolio>
         </dipendente>
     </azienda>
 </anagrafica>
