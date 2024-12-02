@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portfolio>
+    <persona>
+        <nome>Mago</nome>
+        <cognome>Crizio</cognome>
+        <progetti>
+            <lavoro>
+                <titolo>Progetto A</titolo>
+                <link>https://chatgpt.com</link>
+            </lavoro>
+            <lavoro>
+                <titolo>Progetto B</titolo>
+                <link>https://esempio.com/lavoro_b</link>
+            </lavoro>
+            <lavoro>
+                <titolo>Progetto C</titolo>
+                <link>https://esempio.com/lavoro_c</link>
+            </lavoro>
+        </progetti>
+    </persona>
+</portfolio>
