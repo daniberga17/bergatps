@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Elenco dei Post</title>
+</head>
+<style>
+    h1{
+        background-color:blue;
+    }
+    ul{
+        background-color: orange;
+    }
+</style>
+<body>
+    <h1>Elenco dei Post</h1>
+    <ul id="post-list"></ul>
+
+    <script>
+        const apiUrl = 'https://public-api.wordpress.com/wp/v2/sites/en.blog.wordpress.com/posts';
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                const postList = document.getElementById('post-list');
+                data.forEach(post => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `<a href="${post.link}" target="_blank">${post.title.rendered}</a>`;
+                    postList.appendChild(listItem);
+                });
+            })
+            .catch(error => {
+                console.error('Errore durante il recupero dei post:', error);
+            });
+    </script>
+</body>
+</html>
